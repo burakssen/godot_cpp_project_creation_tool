@@ -5,6 +5,7 @@ def create_project():
     os.system("git init")
     os.system("git submodule add -b 4.0 https://github.com/godotengine/godot-cpp")
     os.system("cd godot-cpp && git submodule update --init && cd ..")
+    # Change godot executable path if you are using another os
     os.system(
         "/Applications/Godot.app/Contents/MacOS/Godot --dump-extension-api extension_api.json")
     os.system("python3 -m venv scons")
